@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { StyledNoMatch } from '../global.styled';
+
 
 const NoMatch = () => {
-    return (
-        <>         
-            <div className="container">
-                <p>
-                    <Link to="/">Go to the home page</Link>
-                </p>
-                <img src='404.jpg' />
-            </div>
-        </>
+    return (        
+        <StyledNoMatch>
+            <p>
+                <Link className="link" to="/">There's nothing here. Come back to the home page and try again.</Link>
+            </p>
+            <img src='404.jpg' />
+        </StyledNoMatch>
     )
 }
 export default NoMatch;

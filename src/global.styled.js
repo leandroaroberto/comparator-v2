@@ -19,11 +19,21 @@ export const StyledHeader = styled.header`
         height: 60px;
     }
 
-    span {
-        margin-right: 10px;
+    .title {
+        text-decoration: none;
+        color: #fff;
+        font-size: 54px;
+        font-weight: 600;
     }
 
-    span:hover {
+    .login {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        margin-right: 20px;
+    }
+
+    .login:hover {
         font-weight: bold;
         cursor: pointer;
     }
@@ -99,4 +109,85 @@ export const StyledRam = styled.div`
     input {
         margin: 10px;
     }
+`
+
+export const StyledNoMatch = styled.div`    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    border: 1px #ccc solid;
+    align-items: center;
+
+    p {
+        text-align: center;
+        font-size: 36px;
+        cursor: pointer;
+    }
+
+    p .link{
+        text-decoration: none;
+        color: black;
+    }
+
+    img {
+        width: 100%;
+        height: 800px;
+    }
+`
+
+export const StyledLogin = styled.div`    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    border: 1px #ccc solid;
+    align-items: center;
+
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    form div {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    form input {
+        width: 300px;
+        height: 15px;
+        font-size:16px;
+        padding: 10px;
+    }
+
+    form button {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+        height: 40px;
+        background-color: #0B5ED7;
+        color: #fff;
+        border-radius: 6px;
+        border: 1px #0B5ED7 solid;
+        
+        &:hover {
+            color: #000;
+            background-color: #ccc;
+            font-weight: 600;
+        }
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
 `
