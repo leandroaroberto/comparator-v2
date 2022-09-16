@@ -1,14 +1,14 @@
 import React, {FunctionComponent, useState, useEffect} from 'react'
 import axios from 'axios'
 import { StyledRam } from '../global.styled';
-
+import {SERVER_HOST} from '../config';
 
 export const Ram:FunctionComponent = () => {
 
     const [memory, setMemory] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/resource/ram")
+        axios.get(`${SERVER_HOST}/resource/ram`)
             .then((response) => {
             setMemory(response.data.data);
         });

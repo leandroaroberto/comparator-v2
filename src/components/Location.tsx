@@ -1,16 +1,16 @@
 import React, {FunctionComponent, useState, useEffect} from 'react'
 import axios from 'axios'
+import {SERVER_HOST} from '../config';
 
 export const Location:FunctionComponent = () => {
     const [locs, setLocs] = useState([])
 
     useEffect(() => {
-      axios.get("http://localhost:8000/api/resource/location")
+      axios.get(`${SERVER_HOST}/resource/location`)
             .then((response) => {
             setLocs(response.data.data);
         });
     }, [])
-    
 
     return (
         <select>

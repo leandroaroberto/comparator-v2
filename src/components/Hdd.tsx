@@ -1,11 +1,12 @@
 import React, {FunctionComponent, useState, useEffect} from 'react'
 import axios from 'axios'
+import {SERVER_HOST} from '../config';
 
 export const Hdd:FunctionComponent = () => {
     const [hddType, setHddType] = useState([])
 
     useEffect(() => {
-      axios.get("http://localhost:8000/api/resource/hdd-type")
+      axios.get(`${SERVER_HOST}/resource/hdd-type`)
             .then((response) => {
             setHddType(response.data.data);
         });

@@ -1,5 +1,6 @@
 import React, {FunctionComponent, useEffect, useState} from 'react'
 import axios from 'axios'
+import {SERVER_HOST} from '../config';
 
 interface BoxProps {
   result : string;
@@ -9,7 +10,7 @@ export const Box:FunctionComponent<BoxProps> = ({result}):any => {
     const [prod, setProd] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/list/${result}`)
+        axios.get(`${SERVER_HOST}/list/${result}`)
             .then((response) => {
             setProd(response.data);
         });

@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { StyledLogin } from '../global.styled';
 
+import axios from 'axios';
+import {SERVER_HOST} from '../config';
 
 const Login = () => {
 
@@ -13,7 +15,16 @@ const Login = () => {
     }
 
     const handleSubmit = () => {
-        console.log('Send it:',inputs)
+        axios.post(`${SERVER_HOST}/login`, {
+            email: inputs.email,
+            password: inputs.password
+        })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 
     return (        

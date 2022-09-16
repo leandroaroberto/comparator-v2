@@ -1,6 +1,5 @@
 import { StyledComparator } from '../global.styled';
 
-
 export const Comparator = ({products, setComputerA, setComputerB, computerA, computerB})  => {
 
   const handleChangeServerA = (event) => {

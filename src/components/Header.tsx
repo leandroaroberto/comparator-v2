@@ -2,7 +2,6 @@ import React from 'react'
 import { StyledHeader } from '../global.styled';
 import { Link } from "react-router-dom";
 
-
 export const Header = () => {
   return (
     <StyledHeader>
@@ -31,5 +30,3 @@ const Logo = (props : LogoProps) =>
         }
     </div>
 )
-
-

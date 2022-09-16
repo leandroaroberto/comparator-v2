@@ -2,7 +2,6 @@ import React, {FunctionComponent} from 'react';
 import {Box} from './Box'
 import { StyledPageResult } from '../global.styled';
 
-
 const PageResults = (props : any) => {
     return (
       <StyledPageResult>
@@ -13,4 +12,3 @@ const PageResults = (props : any) => {
 }
 
 export default PageResults;
-

@@ -51,10 +51,18 @@ export const StyledSearch = styled.section`
         margin: 10px;
     }
 
+     .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
     @media (max-width: 468px) {
         display: block;
         text-align: center;
     }
+
+
 `
 
 export const StyledComparator = styled.section`

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
+import {SERVER_HOST} from '../config';
 
 import { Header } from '../components/Header'
 import { Search } from '../components/Search'
@@ -13,11 +14,19 @@ export const Home = () => {
   const [computerB, setComputerB] = useState('')
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/list")
+    axios.get(`${SERVER_HOST}/list`)
       .then((response) => {
         setProducts(response.data);
     });
   }, [])
+
+  // useEffect(() => {
+  //   axios.post(`${SERVER_HOST}/search`,data)
+  //     .then((response) => {
+  //       setProducts(response.data);
+  //   });
+  // }, [])
+
 
   return (
     <>

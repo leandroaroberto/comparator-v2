@@ -23,6 +23,9 @@ export const Search = () => {
           <h3>Location</h3>
           <Location />
         </div>
+        <div className="button">
+          <button>Search</button>
+        </div>
     </StyledSearch>
   )
 }

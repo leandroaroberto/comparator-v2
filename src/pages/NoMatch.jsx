@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { StyledNoMatch } from '../global.styled';
 
-
 const NoMatch = () => {
     return (        
         <StyledNoMatch>
