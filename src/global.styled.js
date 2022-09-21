@@ -8,6 +8,7 @@ export const StyledHeader = styled.header`
   background-color: #000;
   border: 1px #ccc solid;
   color: #fff;
+  min-height: 80px;
 
     div {
         flex: 2;
@@ -42,19 +43,46 @@ export const StyledHeader = styled.header`
 export const StyledSearch = styled.section`
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 10px;
     background-color: #fff;
     border: 1px #ccc solid;
 
-    div {
-        margin: 10px;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px;
+        
+        div {
+            text-align: center;
+        }
     }
 
-     .button {
+    .container-search {
         display: flex;
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
+        padding: 10px 0;    
+    }
+
+    .button {
+        width: 200px;
+        font-size: 16px;
+        font-weight: 600;
+        height: 40px;
+        background-color: #0B5ED7;
+        color: #fff;
+        border-radius: 6px;
+        border: 1px #0B5ED7 solid;
+        cursor: pointer;
+        
+        &:hover {
+            color: #000;
+            background-color: #ccc;
+            font-weight: 600;
+        }
     }  
 
     @media (max-width: 468px) {
@@ -108,6 +136,7 @@ export const StyledPageResult = styled.section`
     border: 1px #ccc solid;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 350px;
 `
 
 export const StyledRam = styled.div`

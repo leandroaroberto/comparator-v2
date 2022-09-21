@@ -27,7 +27,6 @@ export const Home = () => {
   //   });
   // }, [])
 
-
   return (
     <>
       <Search/>
