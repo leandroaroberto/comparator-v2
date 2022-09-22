@@ -1,31 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import {SERVER_HOST} from '../config';
-
-import { Header } from '../components/Header'
 import { Search } from '../components/Search'
 import { Comparator } from '../components/Comparator'
 import PageResults from '../components/PageResults';
+import { useContext } from 'react';
+import { ComparatorContext } from '../context/ComparatorContext';
 
 export const Home = () => {
 
-  const [products, setProducts] = useState([])
+  const {addProducts,products} = useContext(ComparatorContext);
   const [computerA, setComputerA] = useState('')
   const [computerB, setComputerB] = useState('')
 
   useEffect(() => {
     axios.get(`${SERVER_HOST}/list`)
       .then((response) => {
-        setProducts(response.data);
+        addProducts(response.data);
     });
   }, [])
-
-  // useEffect(() => {
-  //   axios.post(`${SERVER_HOST}/search`,data)
-  //     .then((response) => {
-  //       setProducts(response.data);
-  //   });
-  // }, [])
 
   return (
     <>

@@ -3,12 +3,11 @@ import { StyledSearch } from '../global.styled'
 import {Ram} from './Ram'
 import {Location} from './Location'
 import {Hdd} from './Hdd'
+import { useContext } from 'react';
+import { ComparatorContext } from '../context/ComparatorContext';
 
 export const Search = () => {
-
-  const searchParams = () => {
-    console.log('search params')
-  }
+  const {searchParams, runSearch} = useContext(ComparatorContext);
 
   return (
     <StyledSearch>
@@ -32,10 +31,9 @@ export const Search = () => {
         </div>
         <div className="container-search">
           <div>
-            <button className="button" onClick={searchParams}>Search</button>
+            <button className="button" onClick={runSearch}>Search</button>
           </div>
-        </div>
-      
+        </div>      
     </StyledSearch>
   )
 }

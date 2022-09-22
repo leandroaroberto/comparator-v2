@@ -16,12 +16,17 @@ export const Hdd:FunctionComponent = () => {
             setHddType(response.data.data);
         });
     }, [])
+
+    const handleValue = (e:any) => {
+        search('harddisk', e.target.value)
+    };
     
     return (
-        <select >
+        <select onChange={handleValue} >
             <option value=""></option>
             {
-                hddType.map((hdd:any, index:number) => <option key={index} value={hdd.hard_disk_type}>{hdd.hard_disk_type}</option>)
+                hddType.map((hdd:any, index:number) => 
+                    <option key={index} value={hdd.hard_disk_type}>{hdd.hard_disk_type}</option>)
             }
         </select>
     )
